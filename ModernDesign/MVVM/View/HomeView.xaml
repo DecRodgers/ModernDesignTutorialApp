@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="ModernDesign.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ModernDesign.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Discover"
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+            <Border Width="400"
+                    Height="200">
+
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,2">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0" Color="Green"/>
+                            <GradientStop Offset="1" Color="Teal"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="System Specs&#x0a;of this PC"
+                               Foreground="White"
+                               FontSize="28"
+                               Margin="20,10,10,0"/>
+                        <TextBlock Text="Click to find out more!"
+                               Foreground="White"
+                               FontSize="18"
+                               Margin="20,10,10,0"/>
+                    </StackPanel>
+                    <Image Width="150"
+                       Height="150"
+                       Source="/Images/computer.png"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"                       
+                       Margin="0,0,-25,-35"
+                       RenderTransformOrigin="0.5,0.5"/>
+                </Grid>
+            </Border>
+
+            <Border Width="200" 
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="15,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,2">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0" Color="Magenta"/>
+                            <GradientStop Offset="1" Color="Orange"/>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+        </StackPanel>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"></Setter>
+                    
+                </Style>
+            </StackPanel.Resources>
+            
+            <TextBlock Text="Most Reviewed"
+                   Foreground="White"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,10"/>
+            
+            <StackPanel Orientation ="Horizontal">
+                <Border Width="150"
+                        Height="150"
+                        Background="MediumPurple"
+                        CornerRadius="20"
+                        Margin="0"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="CadetBlue"
+                        CornerRadius="20"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="LightGoldenrodYellow"
+                        CornerRadius="20"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="Maroon"
+                        CornerRadius="20"/>
+                
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
